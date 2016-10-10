@@ -1,0 +1,78 @@
+{>"layouts/master" /}
+
+{<body}
+	{+slide/}
+	{+advertisement/}
+	<section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="left-sidebar">
+                        <h2>Products</h2>
+                        <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+                            
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordian" href="#quan-ao">
+                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                                            Quần áo
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="quan-ao" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <ul>
+                                            <li><a href="/products/quan-tay-nam">Quần tây nam</a></li>
+                                            <li><a href="/products/quan-tay-nu">Quần tây nữ</a></li>
+                                            <li><a href="/products/quan-jean-nam">Quần jean nam</a></li>
+                                            <li><a href="/products/quan-jean-nu">Quần jean nữ</a></li>
+                                            <li><a href="/products/ao-nam-cong-so">Áo nam công sở</a></li>
+                                            <li><a href="/products/ao-nu-cong-so">Áo nữ công sở</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><a href="/products/mat-can-nam-cao-cap">Mắt cận nam cao cấp</a></h4>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><a href="/products/mat-nu-hang-hieu">Mắt nữ hàng hiệu</a></h4>
+                                </div>
+                            </div>
+
+                        </div><!--/category-products-->
+                    
+                        <div class="brands_products"><!--brands_products-->
+                            <h2>Blogs</h2> 
+                            <div class="brands-name">
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="/blogs/thong-tin-cong-nghe">Thông tin công nghệ</a></li>
+                                    <li><a href="/blogs/giai-tri">Giải trí</a></li>
+                                    <li><a href="/blogs/khoa-hoc">Khoa học</a></li>
+                                    <li><a href="/blogs/tinh-yeu">Tình yêu</a></li>
+                                </ul>
+                            </div>
+                        </div><!--/brands_products-->
+                        
+                        <div class="price-range"><!--price-range-->
+                            <h2>Price Range</h2>
+                            <div class="well">
+                                 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
+                                 <b>$ 0</b> <b class="pull-right">$ 600</b>
+                            </div>
+                        </div><!--/price-range-->
+                        
+                        <div class="shipping text-center"><!--shipping-->
+                            <img src="/images/home/shipping.jpg" alt="" />
+                        </div><!--/shipping-->
+                    </div>
+                </div>
+                {+main /}
+                </div>
+        </div>
+    </section>
+{/body}

@@ -1,0 +1,38 @@
+{>"layouts/manage" /}
+
+{<body}
+	<div class="content-box-large">
+		<div class="panel-heading">
+			<div class="panel-title">Categories</div>
+			<a style="float: right;" href="/manage/categories/add" class="btn btn-success">Add a category</a>
+			{#success}
+			<div style="clear: both; margin-bottom: 0; margin-top: 40px" class="alert alert-success">{success|s}</div>
+			{/success}
+			{#error}
+			<div style="clear: both; margin-bottom: 0; margin-top: 40px" class="alert alert-danger">{error|s}</div>
+			{/error}
+		</div>
+			<div class="panel-body">
+				<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
+				<thead>
+					<tr>
+						<th>Category Slug</th>
+						<th>Category Name</th>
+						<th>Edit</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					{#categories}
+					<tr class="odd gradeX">
+						<td>{.category_slug}</td>
+						<td>{.category_name}</td>
+						<td class="text-center"><a href="/manage/categories/edit/{._id}" class="btn btn-info">Edit</a></td>
+						<td class="text-center"><button data-id="{._id}" class="btn btn-danger remove-category">Delete</button></td>
+					</tr>
+					{/categories}
+				</tbody>
+			</table>
+			</div>
+		</div>
+{/body}

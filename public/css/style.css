@@ -1,0 +1,79 @@
+.rating-area .tag li a {
+    background: #BF3A2B;
+    color: #fff;
+    padding: 2px 5px;
+}
+#blog-list-desc p,
+#blog-list-desc strong,
+#blog-list-desc span {
+	font-weight: normal !important;
+	color: #393b3b !important;
+	font-size: 14px !important;
+}
+.blog-post-area {
+	text-align: justify;
+}
+.word-break {
+	word-break: break-all;
+}
+.single-blog-post {
+    padding: 15px 10px;
+    border-bottom: 1px solid #ddd;;
+}
+.table-blog-detail {
+	width: 100%;
+}
+.table-blog-detail .img-content {
+	width: 35%;
+	padding-right:15px;
+	float: left;
+}
+.table-blog-detail .content-detail {
+	width: 65%;
+	float: right;
+}
+.table-blog-detail .content-detail h3 {
+	margin-top: 0px;
+}
+.single-blog-post:nth-of-type(odd) {
+	background-color: #FFF;
+}
+.single-blog-post:nth-of-type(even) {
+	background-color: #f5f5f5;
+}
+@media screen and (max-width: 765px) {
+	.table-blog-detail .img-content {
+		text-align: center;
+		width: 100%;
+		padding-right:0px;
+		float: left;
+	}
+	.table-blog-detail .content-detail {
+		width: 100%;
+		float: right;
+	}
+}
+
+/* Signup Form */
+#datetimepicker1 {
+	margin-bottom: 10px;
+}
+#datetimepicker1 input {
+	margin-bottom: 0;
+}
+.input-group-addon {
+    border-radius: 0;
+    border: none;
+}
+#signup-form {
+	height: 560px;
+}
+input {
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	-ms-border-radius: 0;
+	border-radius: 0;
+}
+.error-input {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgb(255, 0, 0);
+}

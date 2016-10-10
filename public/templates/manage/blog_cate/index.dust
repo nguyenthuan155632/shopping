@@ -1,0 +1,38 @@
+{>"layouts/manage" /}
+
+{<body}
+	<div class="content-box-large">
+		<div class="panel-heading">
+			<div class="panel-title">Blog Category</div>
+			<a style="float: right;" href="/manage/blog_cate/add" class="btn btn-success">Add a Blog Category</a>
+			{#success}
+			<div style="clear: both; margin-bottom: 0; margin-top: 40px" class="alert alert-success">{success|s}</div>
+			{/success}
+			{#error}
+			<div style="clear: both; margin-bottom: 0; margin-top: 40px" class="alert alert-danger">{error|s}</div>
+			{/error}
+		</div>
+			<div class="panel-body">
+				<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
+				<thead>
+					<tr>
+						<th>Blog Category Slug</th>
+						<th>Blog Category Name</th>
+						<th>Edit</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					{#blog_cate}
+					<tr class="odd gradeX">
+						<td>{.blog_cate_slug}</td>
+						<td>{.blog_cate_name}</td>
+						<td class="text-center"><a href="/manage/blog_cate/edit/{._id}" class="btn btn-info">Edit</a></td>
+						<td class="text-center"><button data-id="{._id}" class="btn btn-danger remove-blog-cate">Delete</button></td>
+					</tr>
+					{/blog_cate}
+				</tbody>
+			</table>
+			</div>
+		</div>
+{/body}

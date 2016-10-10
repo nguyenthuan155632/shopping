@@ -1,0 +1,48 @@
+{>"layouts/manage" /}
+
+{<body}
+	<div class="content-box-large">
+		<div class="panel-heading">
+			<div class="panel-title">Users</div>
+			<a style="float: right;" href="/manage/signup" class="btn btn-success">Add a user</a>
+			{#success}
+			<div style="clear: both; margin-bottom: 0; margin-top: 40px" class="alert alert-success">{success|s}</div>
+			{/success}
+			{#error}
+			<div style="clear: both; margin-bottom: 0; margin-top: 40px" class="alert alert-danger">{error|s}</div>
+			{/error}
+		</div>
+			<div class="panel-body">
+				<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
+				<thead>
+					<tr>
+						<th>Email</th>
+						<th>Password</th>
+						<th>Role</th>
+						<th>Address</th>
+						<th>Phone</th>
+						<th>Birthday</th>
+						<th>Sex</th>
+						<th>Edit</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					{#users}
+					<tr class="odd gradeX">
+						<td>{.email}</td>
+						<td style="word-break: break-all;">{.password}</td>
+						<td>{.admin}</td>
+						<td>{.address}</td>
+						<td>{.phone}</td>
+						<td>{.birthday}</td>
+						<td>{.sex}</td>
+						<td class="text-center"><a href="/manage/users/edit/{._id}" class="btn btn-info">Edit</a></td>
+						<td class="text-center"><button data-id="{._id}" class="btn btn-danger remove-user">Delete</button></td>
+					</tr>
+					{/users}
+				</tbody>
+			</table>
+			</div>
+		</div>
+{/body}

@@ -1,0 +1,15 @@
+{>"layouts/manage" /}
+
+{<body}
+	<div class="content-box-large">
+		<div class="panel-heading">
+            <div class="panel-title">Dashboard</div>
+			<div style="margin-bottom: 0; margin-top: 30px; display: none;" id="dashboard-err" class="alert alert-danger"></div>
+        </div>
+		<div class="panel-body">
+			{#user}
+				{.email}
+			{/user}
+		</div>
+	</div>
+{/body}

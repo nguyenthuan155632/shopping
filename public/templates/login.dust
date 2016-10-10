@@ -1,0 +1,70 @@
+{>"layouts/master" /}
+
+{<body}
+	<section id="form"><!--form-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 col-sm-offset-1">
+					<div class="login-form"><!--login form-->
+						<h2>Login to your account</h2>
+						{#error_login}
+						<div style="clear: both; margin-bottom: 10px; margin-top: 0px" class="alert alert-danger">{error_login|s}</div>
+						{/error_login}
+						<form action="/login" method="post" id="login-form">
+							<input type="email" name="email" placeholder="Email Address" />
+							<input type="password" name="password" placeholder="Password" />
+							<span>
+								<input type="checkbox" class="checkbox"> 
+								Keep me signed in
+							</span>
+							<button type="submit" class="btn btn-default" id="submit-login">Login</button>
+						</form>
+					</div><!--/login form-->
+				</div>
+				<div class="col-sm-1">
+					<h2 class="or">OR</h2>
+				</div>
+				<div class="col-sm-4">
+					<div class="signup-form"><!--sign up form-->
+						<h2>New User Signup!</h2>
+						{#success_signup}
+						<div style="clear: both; margin-bottom: 10px; margin-top: 0px" class="alert alert-success">{success_signup|s}</div>
+						{/success_signup}
+						{#error_signup}
+						<div style="clear: both; margin-bottom: 10px; margin-top: 0px" class="alert alert-danger">{error_signup|s}</div>
+						{/error_signup}
+						<form action="/signup" method="post" id="signup-form">
+							<input type="email" name="email" placeholder="Email Address"/>
+							<input type="password" name="password" placeholder="Password"/>
+							<input type="password" name="password_confirm" placeholder="Confirm Password"/>
+							<input type="text" name="address" placeholder="Address"/>
+							<input type="number" name="phone" placeholder="Phone"/>
+							<div class='input-group form-date' id='datetimepicker1'>
+			                    <input type='text' placeholder="Birthday" name="birthday"/>
+			                    <span class="input-group-addon">
+			                        <span class="glyphicon glyphicon-calendar"></span>
+			                    </span>
+			                </div>
+							<select name="sex" id="sex">
+								<option value="">---</option>
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+							</select>
+							<button type="submit" class="btn btn-default" id="submit-signup">Signup</button>
+						</form>
+					</div><!--/sign up form-->
+				</div>
+			</div>
+		</div>
+	</section><!--/form-->
+{/body}
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		console.log()
+		$('input[name=address]').val('{address}');
+		$('input[name=phone]').val('{phone}');
+		$('input[name=birthday]').val('{birthday}');
+		$('select#sex').val('{sex}');
+	});
+</script>
