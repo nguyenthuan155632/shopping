@@ -10,7 +10,7 @@ var server;
  * Create and start HTTP server.
  */
 
-server = http.createServer(app);
+server = http.createServer(app); 
 // server.listen(process.env.PORT || 8080);
 server.listen(8080);
 server.on('listening', function () {
